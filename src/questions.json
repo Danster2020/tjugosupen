@@ -1,0 +1,29 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "Hur många stadsdelar finns det i Halmstad?",
+            "answer": 6
+        },
+        {
+            "id": 2,
+            "question": "Hur många gånger har Sverige vunnit Eurovision?",
+            "answer": 7
+        },
+        {
+            "id": 3,
+            "question": "Hur många världsdelar finns det?",
+            "answer": 7
+        },
+        {
+            "id": 4,
+            "question": "Hur många planeter finns det i solsystemet (inklusive Pluto)?",
+            "answer": 9
+        },
+        {
+            "id": 5,
+            "question": "Hur många spelare har ett fotbollslag på planen?",
+            "answer": 11
+        }
+    ]
+}
