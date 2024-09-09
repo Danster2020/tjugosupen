@@ -12,7 +12,7 @@ function Modal({ openModal, closeModal, children }) {
   }, [openModal]);
 
   return (
-    <dialog className="p-10"
+    <dialog className="p-10 backdrop:backdrop-blur-md rounded-3xl"
       ref={ref}
       onCancel={closeModal}
     >
