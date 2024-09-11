@@ -2,13 +2,13 @@
     "questions": [
         {
             "id": 1,
-            "question": "Hur många stadsdelar finns det i Halmstad?",
+            "question": "Hur många komuner finns det i Halland?",
             "answer": 6
         },
         {
             "id": 2,
-            "question": "Hur många gånger har Sverige vunnit Eurovision?",
-            "answer": 7
+            "question": "Hur många grundsmaker finns det enligt forskningen?",
+            "answer": 5
         },
         {
             "id": 3,
@@ -17,13 +17,88 @@
         },
         {
             "id": 4,
-            "question": "Hur många planeter finns det i solsystemet (inklusive Pluto)?",
-            "answer": 9
+            "question": "Hur många planeter finns det i solsystemet?",
+            "answer": 8
         },
         {
             "id": 5,
-            "question": "Hur många spelare har ett fotbollslag på planen?",
+            "question": "Hur många spelare har ett fotbollslag som minst på planen?",
             "answer": 11
+        },
+        {
+            "id": 6,
+            "question": "Hur många rader har ett standard sudoku?",
+            "answer": 9
+        },
+        {
+            "id": 7,
+            "question": "Hur många böcker finns det i den ursprungliga Harry Potter-serien?",
+            "answer": 7
+        },
+        {
+            "id": 8,
+            "question": "Hur många gånger har det svenska fotbollslaget vunnit VM-guld (fram till 2024)?",
+            "answer": 0
+        },
+        {
+            "id": 9,
+            "question": "Hur många sektioner finns det på en standard darttavla?",
+            "answer": 20
+        },
+        {
+            "id": 10,
+            "question": "Hur många grundämnen i det periodiska systemet är i grupp 18 (ädelgaser)?",
+            "answer": 6
+        },
+        {
+            "id": 11,
+            "question": "Hur många nollor är det i en miljard?",
+            "answer": 9
+        },
+        {
+            "id": 12,
+            "question": "Hur många primtal är det mellan 0 och 20?",
+            "answer": 8
+        },
+        {
+            "id": 13,
+            "question": "Hur många officiella språk talas i Schweiz?",
+            "answer": 4
+        },
+        {
+            "id": 14,
+            "question": "Hur många månar har Mars?",
+            "answer": 2
+        },
+        {
+            "id": 15,
+            "question": "Hur många länder har Euron som oficiell valuta (fram till 2024)?",
+            "answer": 20
+        },
+        {
+            "id": 16,
+            "question": "Hur många stater finns det i Sydamerika?",
+            "answer": 12
+        },
+        {
+            "id": 17,
+            "question": "Hur många sidor har en dodekahedron?",
+            "answer": 12
+        },
+        {
+            "id": 18,
+            "question": "Hur många romerska siffror finns det med enbart en bokstav?",
+            "answer": 7
+        },
+        {
+            "id": 19,
+            "question": "Hur många gram ren alkohol innehåller ett standardglas enligt Systembolaget?",
+            "answer": 12
+        },
+        {
+            "id": 20,
+            "question": "Hur många olika typer av blodgrupper finns det enligt ABO-systemet?",
+            "answer": 4
         }
     ]
 }

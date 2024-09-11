@@ -1,15 +1,18 @@
 
 import { Header } from "./components/Header"
+import NumberPicker from "./components/NumberPicker"
+import Modal from "./components/Modal";
+import { useState } from "react";
+import Rules from "./components/Rules";
 
 export function Player() {
-
+  const [modal, setModal] = useState(true);
   return (
     <>
       <Header text="Du är spelare"></Header>
+      <Rules openModal={modal}></Rules>
       <main className="flex flex-col items-center">
-        <div className="flex flex-col items-center p-10 mt-40 bg-neutral-700 w-56 h-56 rounded-full">
-          <input id="number_input" className="inline-block text-8xl w-40 appearance-none rounded-full" type="number" min="0" max="20" />
-        </div>
+        <NumberPicker></NumberPicker>
       </main>
     </>
   )

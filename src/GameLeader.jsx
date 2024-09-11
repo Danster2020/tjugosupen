@@ -49,14 +49,18 @@ export function GameLeader() {
   };
 
   function invitePlayer() {
+    const player_url = window.location.origin + "/player"
     return (
       <Modal
         openModal={modal}
         closeModal={() => setModal(false)}
         children={
           <>
-            <p className="text-xl text-center mb-5">Bjud in spelare</p>
-            <QRCode value="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs" />
+            <div className="flex flex-col items-center max-w-sm">
+              <p className="text-2xl font-bold text-blue-600 text-center mb-5">Bjud in spelare</p>
+              <QRCode value={player_url} />
+              <p className="text-center mt-5 text-neutral-700">{player_url}</p>
+            </div>
           </>
         }
       />
@@ -65,15 +69,13 @@ export function GameLeader() {
 
   function questionCard() {
     return (
+
       <div className="flex flex-col max-w-sm px-10 py-8 mt-10 mx-5 bg-neutral-200 rounded-xl shadow-sm">
         <p className="text-2xl font-medium">
           {randomQuestion ? randomQuestion.question : "Tryck nedan för att starta!"}
         </p>
-        {/* <div className="relative block bg-neutral-400 w-40 h-40 mx-auto rounded-full mt-20 mb-20">
-          <span className="absolute block text-8xl text-center top-[2rem] left-[3.7rem]">{answer}</span>
-        </div> */}
-        <div className="flex  items-center justify-items-center bg-neutral-400 w-40 h-40 mx-auto rounded-full mt-20 mb-20">
-          <span className="inline-block text-8xl text-center mx-auto">{answer}</span>
+        <div className="flex items-center justify-items-center bg-cyan-600 w-40 h-40 mx-auto rounded-full mt-14 mb-14">
+          <span className="inline-block text-8xl text-center mx-auto text-white">{answer}</span>
         </div>
 
 
@@ -91,6 +93,7 @@ export function GameLeader() {
       <Header text={"Du är spelledare"} />
       {invitePlayer()}
       <main className="flex flex-col items-center">
+        <span className="text-white mt-10 px-4 py-2 bg-neutral-800 rounded-full">Frågor ställda: {questionHistory.length} st</span>
         {questionCard()}
 
         {randomQuestion && answer == "?" && <button className="btn_primary mt-10 mb-10" onClick={handleAnswer}>
