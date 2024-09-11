@@ -49,7 +49,7 @@ export function GameLeader() {
   };
 
   function invitePlayer() {
-    const player_url = window.location.origin + "/player"
+    const player_url = window.location.origin; //FIXME fix react/netlify routing for "/player"
     return (
       <Modal
         openModal={modal}
