@@ -99,6 +99,31 @@
             "id": 20,
             "question": "Hur många olika typer av blodgrupper finns det enligt ABO-systemet?",
             "answer": 4
+        },
+        {
+            "id": 21,
+            "question": "Hur många kulor kan ett typiskt magasin för en standard Glock 17-pistol hålla?",
+            "answer": 17
+        },
+        {
+            "id": 22,
+            "question": "Hur många matskedar går det på en deciliter?",
+            "answer": 7
+        },
+        {
+            "id": 23,
+            "question": "Hur många minuter kan en delfin hålla andan under vattnet?",
+            "answer": 10
+        },
+        {
+            "id": 24,
+            "question": "Hur många arter av pingviner finns det i världen?",
+            "answer": 18
+        },
+        {
+            "id": 25,
+            "question": "Hur många timmar sover en katt i genomsnitt per dag?",
+            "answer": 16
         }
     ]
 }
