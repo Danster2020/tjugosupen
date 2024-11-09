@@ -15,8 +15,8 @@ function NumberPicker() {
     return (
         <div className='mt-32 flex flex-col items-center max-w-md'>
             <label className='text-white text-center text-xl' htmlFor="quantity">Vänta på att spelledaren ställer en fråga.
-                <br />Gissa sedan ett nummer mellan 0-20 genom att skriva in det i cirkeln nedan.</label>
-            <div className="mt-10 border-[1rem] border-cyan-400 rounded-full">
+                <br />Gissa sedan ett nummer mellan 0-20 genom att skriva det i cirkeln nedan.</label>
+            <div className="mt-10 border-[1rem] border-yellow-600 rounded-full">
                 <input
                     className='inline-block text-8xl text-center w-40 h-40 p-4 appearance-none rounded-full'
                     type="text"

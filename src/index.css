@@ -11,11 +11,15 @@
 
 @layer components {
   .btn_primary {
-    @apply py-2 px-5 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-75;
+    @apply py-2 px-5 bg-yellow-700 text-white font-semibold rounded-full shadow-md hover:bg-opacity-80 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-75;
   }
 
   .btn_secondary {
     @apply py-2 px-5 bg-neutral-300 text-black font-semibold rounded-full shadow-md hover:bg-neutral-500 focus:outline-none focus:ring focus:ring-neutral-400 focus:ring-opacity-75;
+  }
+
+  .btn_third {
+    @apply py-2 px-5 outline outline-2 rounded-full outline-white text-white focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-75;
   }
 
   #number_input {

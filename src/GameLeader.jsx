@@ -1,7 +1,6 @@
-import QRCode from "react-qr-code";
 import { Header } from "./components/Header";
 import { useState, useEffect } from "react";
-import Modal from "./components/Modal";
+import { InvitePlayer } from "./components/InvitePlayer";
 
 import data from "./questions.json";
 
@@ -23,9 +22,7 @@ export function GameLeader() {
     setAnswer("?")
     if (questionHistory.length === questions.length) {
       alert("Alla frågor har använts! Spelet startas om.");
-      localStorage.removeItem("questionHistory");
-      setQuestionHistory([]);
-      setRandomQuestion(null);
+      resetGame()
       return;
     }
 
@@ -48,24 +45,20 @@ export function GameLeader() {
     setAnswer(randomQuestion.answer)
   };
 
-  function invitePlayer() {
-    const player_url = window.location.origin; //FIXME fix react/netlify routing for "/player"
-    return (
-      <Modal
-        openModal={modal}
-        closeModal={() => setModal(false)}
-        children={
-          <>
-            <div className="flex flex-col items-center max-w-sm">
-              <p className="text-2xl font-bold text-blue-600 text-center mb-5">Bjud in spelare</p>
-              <QRCode value={player_url} />
-              <p className="text-center mt-5 text-neutral-700">{player_url}</p>
-            </div>
-          </>
-        }
-      />
-    );
-  }
+  const resetGame = () => {
+    localStorage.removeItem("questionHistory");
+    setQuestionHistory([]);
+    setRandomQuestion(null);
+    return;
+  };
+
+  const handleResetClick = () => {
+    if (confirm('Vill du starta om spelet?')) {
+      resetGame()
+    } else {
+      return;
+    }
+  };
 
   function questionCard() {
     return (
@@ -77,7 +70,9 @@ export function GameLeader() {
         <div className="flex items-center justify-items-center bg-cyan-600 w-40 h-40 mx-auto rounded-full mt-14 mb-14">
           <span className="inline-block text-8xl text-center mx-auto text-white">{answer}</span>
         </div>
-
+        {randomQuestion && answer == "?" && <button className="btn_primary mt-5 mb-10" onClick={handleAnswer}>
+          Se svar
+        </button>}
 
 
         {randomQuestion &&
@@ -91,19 +86,18 @@ export function GameLeader() {
   return (
     <>
       <Header text={"Du är spelledare"} />
-      {invitePlayer()}
+      <InvitePlayer modal={modal} setModal={setModal} />
       <main className="flex flex-col items-center">
         <span className="text-white mt-10 px-4 py-2 bg-neutral-800 rounded-full">Frågor ställda: {questionHistory.length} st</span>
         {questionCard()}
 
-        {randomQuestion && answer == "?" && <button className="btn_primary mt-10 mb-10" onClick={handleAnswer}>
-          Se svar
-        </button>}
 
 
         <button className="btn_primary mt-10" onClick={getRandomQuestion}>
           {randomQuestion ? "Nästa fråga >" : "Starta"}
         </button>
+
+        <button className="btn_third text-red-700 outline-red-700 mt-28 mb-2" onClick={handleResetClick}>Starta om</button>
 
       </main>
     </>
